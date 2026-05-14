@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>产品服务 - 华美时装</title>
+  <meta name="description" content="华美时装女装批发系列，连衣裙、套装、上装、裤装、外套，5000+款式可选。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/products.css" />
+  <style>
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: none;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar transparent" id="mainNav">
+  <div class="navbar-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-text">华美时装</span>
+      <span class="logo-sub">HUAMEI FASHION</span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="nav-link">首页</a></li>
+      <li><a href="about.html" class="nav-link">关于我们</a></li>
+      <li><a href="products.html" class="nav-link">产品服务</a></li>
+      <li><a href="contact.html" class="nav-link">联系我们</a></li>
+      <li><a href="contact.html" class="btn-nav">获取报价</a></li>
+    </ul>
+    <div class="nav-mobile-toggle" id="mobileToggle">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- Page Hero -->
+<div class="page-hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="index.html">首页</a>
+      <span>›</span>
+      <span>产品服务</span>
+    </div>
+    <h1>产品系列</h1>
+    <p>5000+ 款式，每周上新，满足全球各市场需求</p>
+  </div>
+</div>
+
+<!-- Products Section -->
+<section class="section">
+  <div class="container">
+
+    <!-- Filter Bar -->
+    <div class="filter-bar reveal">
+      <span class="filter-label">筛选类别：</span>
+      <button class="filter-btn active" data-filter="all">全部</button>
+      <button class="filter-btn" data-filter="dress">连衣裙</button>
+      <button class="filter-btn" data-filter="top">上装</button>
+      <button class="filter-btn" data-filter="pants">裤装</button>
+      <button class="filter-btn" data-filter="suit">套装</button>
+      <button class="filter-btn" data-filter="coat">外套大衣</button>
+      <button class="filter-btn" data-filter="evening">晚礼服</button>
+    </div>
+
+    <!-- 
+      ============================================================
+      产品网格 - 图片文件命名规则说明
+      ============================================================
+      每个产品卡片对应两个文件：
+        图片：images/products/productXX.jpg
+        视频：videos/products/productXX.mp4
+
+      替换方法：
+        1. 将新图片命名为 productXX.jpg（XX为序号）
+        2. 放入 images/products/ 文件夹
+        3. 对应视频命名为 productXX.mp4
+        4. 放入 videos/products/ 文件夹
+
+      图片和视频同名（不含扩展名），系统自动关联。
+      ============================================================
+    -->
+    <div class="products-page-grid" id="productsGrid">
+
+      <!-- ===== 连衣裙系列 ===== -->
+      <div class="product-card reveal" data-category="dress" data-tags="连衣裙,印花,夏款,欧美风">
+        <div class="product-media">
+          <img src="images/products/product1.jpg" alt="优雅印花连衣裙"
+               onerror="this.parentNode.innerHTML='<div class=\'img-placeholder\'><svg width=\'40\' height=\'40\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1.5\'><rect x=\'3\' y=\'3\' width=\'18\' height=\'18\' rx=\'2\'/><circle cx=\'8.5\' cy=\'8.5\' r=\'1.5\'/><path d=\'m21 15-5-5L5 21\'/></svg><span>product1.jpg</span></div>'" />
+          <span class="product-badge">热销</span>
+          <button class="product-video-btn" data-video="videos/products/product1.mp4" title="播放视频">
+            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          </button>
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">优雅印花连衣裙</h3>
+          <p class="product-desc">夏日清爽印花，A字版型显身材</p>
+          <div class="product-meta">
+            <span class="product-moq">最低50件</span>
+            <span class="product-price">询价</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card reveal" data-category="dress" data-tags="连衣裙,针织,四季,修身">
+        <div class="product-media">
+          <img src="images/products/product2.jpg" alt="修身针织连衣裙"
+               onerror="this.parentNode.innerHTML='<div class=\'img-placeholder\'><svg width=\'40\' height=\'40\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1.5\'><rect x=\'3\' y=\'3\' width=\'18\' height=\'18\' rx=\'2\'/><circle cx=\'8.5\' cy=\'8.5\' r=\'1.5\'/><path d=\'m21 15-5-5L5 21\'/></svg><span>product2.jpg</span></div>'" />
+          <span class="product-badge">爆款</span>
+          <button class="product-video-btn" data-video="videos/products/product2.mp4" title="播放视频">
+            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          </button>
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">修身针织连衣裙</h3>
+          <p class="product-desc">弹力针织面料，修身显瘦，四季皆宜</p>
+          <div class="product-meta">
+            <span class="product-moq">最低60件</span>
+            <span class="product-price">询价</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card reveal" data-category="dress" data-tags="连衣裙,波西米亚,度假风,长裙">
+        <div class="product-media">
+          <img src="images/products/product3.jpg" alt="波西米亚长裙"
+               onerror="this.parentNode.innerHTML='<div class=\'img-placeholder\'><svg width=\'40\' height=\'40\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1.5\'><rect x=\'3\' y=\'3\' width=\'18\' height=\'18\' rx=\'2\'/><circle cx=\'8.5\' cy=\'8.5\' r=\'1.5\'/><path d=\'m21 15-5-5L5 21\'/></svg><span>product3.jpg</span></div>'" />
+          <button class="product-video-btn" data-video="videos/products/product3.mp4" title="播放视频">
+            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          </button>
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">波西米亚长裙</h3>
+          <p class="product-desc">流苏细节，民族风印花，度假风首选</p>
+          <div class="product-meta">
+            <span class="product-moq">最低50件</span>
+            <span class="product-price">询价</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card reveal" data-category="dress" data-tags="连衣裙,V领,气质,晚装">
+        <div class="product-media">
+          <img src="images/products/product4.jpg" alt="V领气质连衣裙"
+               onerror="this.parentNode.innerHTML='<div class=\'img-placeholder\'><svg width=\'40\' height=\'40\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1.5\'><rect x=\'3\' y=\'3\' width=\'18\' height=\'18\' rx=\'2\'/><circle cx=\'8.5\' cy=\'8.5\' r=\'1.5\'/><path d=\'m21 15-5-5L5 21\'/></svg><span>product4.jpg</span></div>'" />
+          <button class="product-video-btn" data-video="videos/products/product4.mp4" title="播放视频">
+            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          </button>
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">V领气质连衣裙</h3>
+          <p class="product-desc">深V领设计，丝滑垂坠感面料，高贵典雅</p>
+          <div class="product-meta">
+            <span class="product-moq">最低40件</span>
+            <span class="product-price">询价</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== 上装系列 ===== -->
+      <div class="product-card reveal" data-category="top" data-tags="上装,雪纺,衬衫,百搭">
+        <div class="product-media">
+          <img src="images/products/product5.jpg" alt="雪纺衬衫"
+               onerror="this.parentNode.innerHTML='<div class=\'img-placeholder\'><svg width=\'40\' height=\'40\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1.5\'><rect x=\'3\' y=\'3\' width=\'18\' height=\'18\' rx=\'2\'/><circle cx=\'8.5\' cy=\'8.5\' r=\'1.5\'/><path d=\'m21 15-5-5L5 21\'/></svg><span>product5.jpg</span></div>'" />
+          <button class="product-video-btn" data-video="videos/products/product5.mp4" title="播放视频">
+            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          </button>
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">雪纺衬衫</h3>
+          <p class="product-desc">轻薄透气，多色可选，通勤百搭款</p>
+          <div class="product-meta">
+            <span class="product-moq">最低100件</span>
+            <span class="product-price">询价</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card reveal" data-category="top" data-tags="上装,T恤,印花,休闲">
+        <div class="product-media">
+          <img src="images/products/product6.jpg" alt="休闲印花T恤"
+               onerror="this.parentNode.innerHTML='<div class=\'img-placeholder\'><svg width=\'40\' height=\'40\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1.5\'><rect x=\'3\' y=\'3\' width=\'18\' height=\'18\' rx=\'2\'/><circle cx=\'8.5\' cy=\'8.5\' r=\'1.5\'/><path d=\'m21 15-5-5L5 21\'/></svg><span>product6.jpg</span></div>'" />
+          <span class="product-badge">新品</span>
+          <button class="product-video-btn" data-video="videos/products/product6.mp4" title="播放视频">
+            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          </button>
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">休闲印花T恤</h3>
+          <p class="product-desc">纯棉柔软，个性印花，街头休闲风格</p>
+          <div class="product-meta">
+            <span class="product-moq">最低100件</span>
+            <span class="product-price">询价</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== 裤装系列 ===== -->
+      <div class="product-card reveal" data-category="pants" data-tags="裤装,阔腿裤,高腰,显瘦">
+        <div class="product-media">
+          <img src="images/products/product7.jpg" alt="高腰阔腿裤"
+               onerror="this.parentNode.innerHTML='<div class=\'img-placeholder\'><svg width=\'40\' height=\'40\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1.5\'><rect x=\'3\' y=\'3\' width=\'18\' height=\'18\' rx=\'2\'/><circle cx=\'8.5\' cy=\'8.5\' r=\'1.5\'/><path d=\'m21 15-5-5L5 21\'/></svg><span>product7.jpg</span></div>'" />
+          <button class="product-video-btn" data-video="videos/products/product7.mp4" title="播放视频">
+            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          </button>
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">高腰阔腿裤</h3>
+          <p class="product-desc">垂感面料，高腰设计，显瘦修腿</p>
+          <div class="product-meta">
+            <span class="product-moq">最低50件</span>
+            <span class="product-price">询价</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card reveal" data-category="pants" data-tags="裤装,牛仔裤,修身,休闲">
+        <div class="product-media">
+          <img src="images/products/product8.jpg" alt="弹力修身牛仔裤"
+               onerror="this.parentNode.innerHTML='<div class=\'img-placeholder\'><svg width=\'40\' height=\'40\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1.5\'><rect x=\'3\' y=\'3\' width=\'18\' height=\'18\' rx=\'2\'/><circle cx=\'8.5\' cy=\'8.5\' r=\'1.5\'/><path d=\'m21 15-5-5L5 21\'/></svg><span>product8.jpg</span></div>'" />
+          <span class="product-badge">热销</span>
+          <button class="product-video-btn" data-video="videos/products/product8.mp4" title="播放视频">
+            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          </button>
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">弹力修身牛仔裤</h3>
+          <p class="product-desc">高弹力牛仔布，版型修身，舒适耐穿</p>
+          <div class="product-meta">
+            <span class="product-moq">最低60件</span>
+            <span class="product-price">询价</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== 套装系列 ===== -->
+      <div class="product-card reveal" data-category="suit" data-tags="套装,西装,商务,职场">
+        <div class="product-media">
+          <img src="images/products/product9.jpg" alt="商务休闲西装套装"
+               onerror="this.parentNode.innerHTML='<div class=\'img-placeholder\'><svg width=\'40\' height=\'40\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1.5\'><rect x=\'3\' y=\'3\' width=\'18\' height=\'18\' rx=\'2\'/><circle cx=\'8.5\' cy=\'8.5\' r=\'1.5\'/><path d=\'m21 15-5-5L5 21\'/></svg><span>product9.jpg</span></div>'" />
+          <span class="product-badge">新品</span>
+          <button class="product-video-btn" data-video="videos/products/product9.mp4" title="播放视频">
+            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          </button>
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">商务休闲西装套装</h3>
+          <p class="product-desc">简约都市风，高级感面料，通勤两用</p>
+          <div class="product-meta">
+            <span class="product-moq">最低30件</span>
+            <span class="product-price">询价</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card reveal" data-category="suit" data-tags="套装,运动休闲,卫衣,套装">
+        <div class="product-media">
+          <img src="images/products/product10.jpg" alt="运动休闲套装"
+               onerror="this.parentNode.innerHTML='<div class=\'img-placeholder\'><svg width=\'40\' height=\'40\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1.5\'><rect x=\'3\' y=\'3\' width=\'18\' height=\'18\' rx=\'2\'/><circle cx=\'8.5\' cy=\'8.5\' r=\'1.5\'/><path d=\'m21 15-5-5L5 21\'/></svg><span>product10.jpg</span></div>'" />
+          <button class="product-video-btn" data-video="videos/products/product10.mp4" title="播放视频">
+            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          </button>
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">运动休闲套装</h3>
+          <p class="product-desc">棉质卫衣+长裤，舒适休闲，日常百搭</p>
+          <div class="product-meta">
+            <span class="product-moq">最低50件</span>
+            <span class="product-price">询价</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== 外套大衣系列 ===== -->
+      <div class="product-card reveal" data-category="coat" data-tags="外套,风衣,秋冬,经典">
+        <div class="product-media">
+          <img src="images/products/product11.jpg" alt="经典双排扣风衣"
+               onerror="this.parentNode.innerHTML='<div class=\'img-placeholder\'><svg width=\'40\' height=\'40\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1.5\'><rect x=\'3\' y=\'3\' width=\'18\' height=\'18\' rx=\'2\'/><circle cx=\'8.5\' cy=\'8.5\' r=\'1.5\'/><path d=\'m21 15-5-5L5 21\'/></svg><span>product11.jpg</span></div>'" />
+          <span class="product-badge">新品</span>
+          <button class="product-video-btn" data-video="videos/products/product11.mp4" title="播放视频">
+            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          </button>
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">经典双排扣风衣</h3>
+          <p class="product-desc">经典版型，优质防风面料，秋冬必备</p>
+          <div class="product-meta">
+            <span class="product-moq">最低30件</span>
+            <span class="product-price">询价</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== 晚礼服系列 ===== -->
+      <div class="product-card reveal" data-category="evening" data-tags="晚礼服,绑带,晚宴,气质">
+        <div class="product-media">
+          <img src="images/products/product12.jpg" alt="绑带晚礼服"
+               onerror="this.parentNode.innerHTML='<div class=\'img-placeholder\'><svg width=\'40\' height=\'40\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1.5\'><rect x=\'3\' y=\'3\' width=\'18\' height=\'18\' rx=\'2\'/><circle cx=\'8.5\' cy=\'8.5\' r=\'1.5\'/><path d=\'m21 15-5-5L5 21\'/></svg><span>product12.jpg</span></div>'" />
+          <button class="product-video-btn" data-video="videos/products/product12.mp4" title="播放视频">
+            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          </button>
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">绑带晚礼服</h3>
+          <p class="product-desc">缎面绑带设计，优雅高贵，晚宴首选</p>
+          <div class="product-meta">
+            <span class="product-moq">最低20件</span>
+            <span class="product-price">询价</span>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /products-page-grid -->
+
+    <!-- 如需添加更多产品，复制上面的 product-card 模块即可 -->
+
+    <div class="load-more-wrap reveal">
+      <p style="font-size:14px; color:var(--text-secondary); margin-bottom:16px;">
+        以上为展示款式，实际库存5000+款，更多款式请联系我们索取完整目录
+      </p>
+      <a href="contact.html" class="btn btn-outline-dark">联系获取完整产品目录</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- Order Process -->
+<section class="section" style="background:var(--off-white);">
+  <div class="container">
+    <div class="section-header center reveal">
+      <div class="section-label">合作流程</div>
+      <h2 class="section-title">简单四步，开启合作</h2>
+    </div>
+    <div style="display:grid; grid-template-columns: repeat(4, 1fr); gap:0; position:relative;">
+      <!-- Connector line -->
+      <div style="position:absolute; top:28px; left:calc(12.5% + 20px); right:calc(12.5% + 20px); height:2px; background:var(--gray-200); z-index:0;"></div>
+      <div style="text-align:center; padding:0 24px; position:relative; z-index:1;" class="reveal">
+        <div style="width:56px;height:56px;background:var(--primary);border-radius:50%;margin:0 auto 16px;display:flex;align-items:center;justify-content:center;color:var(--accent-light);font-size:20px;font-weight:700;">1</div>
+        <div style="font-size:15px;font-weight:600;margin-bottom:8px;">发送询价</div>
+        <div style="font-size:13px;color:var(--text-secondary);line-height:1.7;">选择感兴趣的款式，填写询价表单或联系我们</div>
+      </div>
+      <div style="text-align:center; padding:0 24px; position:relative; z-index:1;" class="reveal">
+        <div style="width:56px;height:56px;background:var(--accent);border-radius:50%;margin:0 auto 16px;display:flex;align-items:center;justify-content:center;color:var(--white);font-size:20px;font-weight:700;">2</div>
+        <div style="font-size:15px;font-weight:600;margin-bottom:8px;">确认报价</div>
+        <div style="font-size:13px;color:var(--text-secondary);line-height:1.7;">24小时内收到详细报价单，支持样品先行</div>
+      </div>
+      <div style="text-align:center; padding:0 24px; position:relative; z-index:1;" class="reveal">
+        <div style="width:56px;height:56px;background:var(--primary);border-radius:50%;margin:0 auto 16px;display:flex;align-items:center;justify-content:center;color:var(--accent-light);font-size:20px;font-weight:700;">3</div>
+        <div style="font-size:15px;font-weight:600;margin-bottom:8px;">下单生产</div>
+        <div style="font-size:13px;color:var(--text-secondary);line-height:1.7;">确认订单后安排生产，全程追踪生产进度</div>
+      </div>
+      <div style="text-align:center; padding:0 24px; position:relative; z-index:1;" class="reveal">
+        <div style="width:56px;height:56px;background:var(--primary);border-radius:50%;margin:0 auto 16px;display:flex;align-items:center;justify-content:center;color:var(--accent-light);font-size:20px;font-weight:700;">4</div>
+        <div style="font-size:15px;font-weight:600;margin-bottom:8px;">发货配送</div>
+        <div style="font-size:13px;color:var(--text-secondary);line-height:1.7;">品控验货后安排发货，提供物流追踪单号</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-banner">
+  <div class="container">
+    <h2 class="section-title">找到心仪款式了吗？</h2>
+    <p class="section-subtitle" style="color:rgba(255,255,255,0.65); margin:0 auto 36px;">
+      支持样品下单，最低30件起批，即刻发送询价
+    </p>
+    <a href="contact.html" class="btn btn-primary">发送询价单</a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="footer-logo-text">华美时装</div>
+        <p class="footer-desc">专注外贸女装批发二十年，为全球买家提供高品质、多款式的服装批发服务。</p>
+      </div>
+      <div class="footer-col">
+        <h4>快速导航</h4>
+        <div class="footer-links">
+          <a href="index.html">首页</a>
+          <a href="about.html">关于我们</a>
+          <a href="products.html">产品服务</a>
+          <a href="contact.html">联系我们</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>产品类别</h4>
+        <div class="footer-links">
+          <a href="#">连衣裙系列</a>
+          <a href="#">套装系列</a>
+          <a href="#">上装系列</a>
+          <a href="#">外套大衣</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>联系方式</h4>
+        <div class="footer-contact-item"><span class="footer-contact-icon">✉</span><span>info@huameifashion.com</span></div>
+        <div class="footer-contact-item"><span class="footer-contact-icon">☎</span><span>+86 20 1234 5678</span></div>
+        <div class="footer-contact-item"><span class="footer-contact-icon">⊙</span><span>广东省广州市白云区某某路88号</span></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2024 华美时装 HUAMEI FASHION. All rights reserved.</span>
+      <span>粤ICP备XXXXXXXX号</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Video Modal -->
+<div class="video-modal" id="videoModal">
+  <div class="video-modal-inner">
+    <button class="video-modal-close">×</button>
+    <video id="modalVideo" controls playsinline>
+      您的浏览器不支持视频播放
+    </video>
+  </div>
+</div>
+
+<!-- Product Detail Modal -->
+<div class="product-detail-modal" id="productDetailModal">
+  <div class="product-detail-inner">
+    <div class="product-detail-media">
+      <img src="" alt="" />
+      <button class="product-detail-close">×</button>
+    </div>
+    <div class="product-detail-info">
+      <div class="product-tags"></div>
+      <h2 class="product-detail-name"></h2>
+      <div class="product-detail-price"></div>
+      <p class="product-detail-desc"></p>
+      <div class="product-specs">
+        <div class="spec-row">
+          <span class="spec-key">最低起订量</span>
+          <span class="spec-val detail-moq"></span>
+        </div>
+        <div class="spec-row">
+          <span class="spec-key">面料成分</span>
+          <span class="spec-val">多款可选，按需定制</span>
+        </div>
+        <div class="spec-row">
+          <span class="spec-key">尺码范围</span>
+          <span class="spec-val">XS - 4XL</span>
+        </div>
+        <div class="spec-row">
+          <span class="spec-key">颜色</span>
+          <span class="spec-val">多色可选</span>
+        </div>
+        <div class="spec-row">
+          <span class="spec-key">交货周期</span>
+          <span class="spec-val">7-15个工作日</span>
+        </div>
+      </div>
+      <a href="contact.html" class="btn btn-primary" style="width:100%; justify-content:center;">发送询价</a>
+    </div>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+<script src="js/products.js"></script>
+</body>
+</html>

@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>联系我们 - 华美时装</title>
+  <meta name="description" content="联系华美时装，获取女装批发报价、样品及更多合作信息。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: none;
+    }
+    .reveal-d1 { transition-delay: 0.1s; }
+    .reveal-d2 { transition-delay: 0.2s; }
+    .reveal-d3 { transition-delay: 0.3s; }
+
+    /* FAQ */
+    .faq-list {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+    .faq-item {
+      border-bottom: 1px solid var(--gray-200);
+    }
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 20px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--text-primary);
+      cursor: pointer;
+      text-align: left;
+      gap: 16px;
+    }
+    .faq-question:hover {
+      color: var(--accent);
+    }
+    .faq-icon {
+      min-width: 20px;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent);
+      font-size: 18px;
+      transition: transform 0.3s ease;
+      font-weight: 300;
+    }
+    .faq-item.open .faq-icon {
+      transform: rotate(45deg);
+    }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease, padding 0.35s ease;
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.8;
+    }
+    .faq-item.open .faq-answer {
+      max-height: 300px;
+      padding-bottom: 20px;
+    }
+
+    /* Social Links */
+    .social-links {
+      display: flex;
+      gap: 12px;
+      margin-top: 20px;
+    }
+    .social-link {
+      width: 40px;
+      height: 40px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--gray-300);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-secondary);
+      font-size: 14px;
+      font-weight: 600;
+      transition: var(--transition);
+    }
+    .social-link:hover {
+      background: var(--primary);
+      color: var(--white);
+      border-color: var(--primary);
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar transparent" id="mainNav">
+  <div class="navbar-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-text">华美时装</span>
+      <span class="logo-sub">HUAMEI FASHION</span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="nav-link">首页</a></li>
+      <li><a href="about.html" class="nav-link">关于我们</a></li>
+      <li><a href="products.html" class="nav-link">产品服务</a></li>
+      <li><a href="contact.html" class="nav-link">联系我们</a></li>
+      <li><a href="contact.html" class="btn-nav">获取报价</a></li>
+    </ul>
+    <div class="nav-mobile-toggle" id="mobileToggle">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- Page Hero -->
+<div class="page-hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="index.html">首页</a>
+      <span>›</span>
+      <span>联系我们</span>
+    </div>
+    <h1>联系我们</h1>
+    <p>我们的团队随时为您服务，24小时内回复询价</p>
+  </div>
+</div>
+
+<!-- Contact Section -->
+<section class="section">
+  <div class="container">
+    <div class="contact-grid">
+
+      <!-- Contact Info -->
+      <div>
+        <div class="section-label reveal">联系方式</div>
+        <h2 class="section-title reveal">与我们取得联系</h2>
+        <p class="section-subtitle reveal" style="margin-bottom:32px;">
+          无论您是初次洽谈合作，还是老客户追加订单，我们的专业团队都将为您提供及时、周到的服务。
+        </p>
+
+        <div class="reveal">
+          <div class="contact-info-item">
+            <div class="contact-icon">✉</div>
+            <div>
+              <div class="contact-info-label">电子邮件</div>
+              <div class="contact-info-value">info@huameifashion.com</div>
+              <div style="font-size:13px; color:var(--text-secondary); margin-top:2px;">sales@huameifashion.com（销售专线）</div>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="contact-icon">☎</div>
+            <div>
+              <div class="contact-info-label">电话 / WhatsApp</div>
+              <div class="contact-info-value">+86 20 1234 5678</div>
+              <div style="font-size:13px; color:var(--text-secondary); margin-top:2px;">工作时间：周一至周六 9:00 - 18:00 (GMT+8)</div>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="contact-icon">W</div>
+            <div>
+              <div class="contact-info-label">微信</div>
+              <div class="contact-info-value">HuaMeiFashion2024</div>
+              <div style="font-size:13px; color:var(--text-secondary); margin-top:2px;">扫码添加微信，即刻开始沟通</div>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="contact-icon">⊙</div>
+            <div>
+              <div class="contact-info-label">工厂地址</div>
+              <div class="contact-info-value">广东省广州市白云区某某路88号</div>
+              <div style="font-size:13px; color:var(--text-secondary); margin-top:2px;">欢迎来厂参观，请提前预约</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal" style="margin-top:8px;">
+          <div style="font-size:13px; color:var(--text-secondary); margin-bottom:10px;">关注我们</div>
+          <div class="social-links">
+            <a href="#" class="social-link" title="微信">W</a>
+            <a href="#" class="social-link" title="WhatsApp">A</a>
+            <a href="#" class="social-link" title="Instagram">Ig</a>
+            <a href="#" class="social-link" title="Facebook">Fb</a>
+            <a href="#" class="social-link" title="阿里巴巴国际站">Ali</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="contact-form reveal reveal-d2">
+        <h3 class="form-title">发送询价单</h3>
+        <form id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">您的姓名 *</label>
+              <input type="text" id="name" name="name" class="form-control" placeholder="Full Name" required />
+            </div>
+            <div class="form-group">
+              <label for="company">公司名称</label>
+              <input type="text" id="company" name="company" class="form-control" placeholder="Company Name" />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">电子邮件 *</label>
+              <input type="email" id="email" name="email" class="form-control" placeholder="email@example.com" required />
+            </div>
+            <div class="form-group">
+              <label for="phone">电话 / WhatsApp</label>
+              <input type="tel" id="phone" name="phone" class="form-control" placeholder="+1 234 567 8900" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="country">所在国家/地区</label>
+            <input type="text" id="country" name="country" class="form-control" placeholder="Country / Region" />
+          </div>
+          <div class="form-group">
+            <label for="category">感兴趣的产品类别</label>
+            <select id="category" name="category" class="form-control">
+              <option value="">请选择...</option>
+              <option value="dress">连衣裙系列</option>
+              <option value="top">上装系列</option>
+              <option value="pants">裤装系列</option>
+              <option value="suit">套装系列</option>
+              <option value="coat">外套大衣</option>
+              <option value="evening">晚礼服</option>
+              <option value="all">全类别</option>
+              <option value="custom">OEM/ODM定制</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="quantity">预计采购数量（件/月）</label>
+            <select id="quantity" name="quantity" class="form-control">
+              <option value="">请选择...</option>
+              <option value="100-">100件以下</option>
+              <option value="100-500">100 - 500件</option>
+              <option value="500-2000">500 - 2000件</option>
+              <option value="2000+">2000件以上</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">询价详情 *</label>
+            <textarea id="message" name="message" class="form-control" rows="4"
+              placeholder="请描述您需要的款式、数量、目标市场等详细信息..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-submit" style="width:100%; justify-content:center; font-size:15px; padding:15px;">
+            发送询价
+          </button>
+          <p style="font-size:12px; color:var(--text-light); text-align:center; margin-top:12px;">
+            我们将在 24 小时内回复您的询价
+          </p>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Map -->
+<section class="section" style="padding-top:0;">
+  <div class="container">
+    <div class="map-placeholder">
+      <div class="map-pin">
+        <div class="map-pin-dot"></div>
+        <div class="map-label">华美时装 · 广州白云区</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" style="background:var(--off-white);">
+  <div class="container">
+    <div class="section-header center reveal">
+      <div class="section-label">常见问题</div>
+      <h2 class="section-title">您可能想了解的</h2>
+    </div>
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>最低起订量（MOQ）是多少？</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          我们的最低起订量根据产品类别不同有所差异，通常为30-100件/款。对于新客户，我们也提供样品服务，让您在大量采购前先验证产品质量。
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>可以在下批量订单前先订样品吗？</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          可以。我们支持样品单，样品费用通常为单件零售价的1-2倍。在后续下正式批量订单时，样品费用可抵扣。样品制作时间通常为3-7个工作日。
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>生产周期和交货时间是多久？</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          现货款式可1-3天发货。订制或下单生产的款式，通常生产周期为7-15个工作日。具体以订单量和款式复杂程度为准。物流时效根据目的地和运输方式，通常空运3-7天，海运15-30天。
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>支持哪些付款方式？</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          我们支持 T/T（电汇）、西联汇款、PayPal（B2B业务单）等多种国际付款方式。通常首次合作需预付30%-50%定金，余款在发货前结清。老客户可协商信用账期。
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>支持OEM/ODM定制服务吗？</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          支持。我们提供完整的OEM（客户提供设计，我们生产）和ODM（由我们设计开发）服务，包括面料选择、版型开发、私标印制等。定制起订量通常为每款300件以上，欢迎联系我们详谈。
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>产品质量有什么保障？</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          我们通过了ISO 9001质量管理体系认证，每件产品出厂前经过三道品控工序。如收到的货物存在质量问题，我们承诺补货或退款，具体以双方签订的合同条款为准。
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="footer-logo-text">华美时装</div>
+        <p class="footer-desc">专注外贸女装批发二十年，为全球买家提供高品质、多款式的服装批发服务。</p>
+      </div>
+      <div class="footer-col">
+        <h4>快速导航</h4>
+        <div class="footer-links">
+          <a href="index.html">首页</a>
+          <a href="about.html">关于我们</a>
+          <a href="products.html">产品服务</a>
+          <a href="contact.html">联系我们</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>产品类别</h4>
+        <div class="footer-links">
+          <a href="products.html">连衣裙系列</a>
+          <a href="products.html">套装系列</a>
+          <a href="products.html">上装系列</a>
+          <a href="products.html">外套大衣</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>联系方式</h4>
+        <div class="footer-contact-item"><span class="footer-contact-icon">✉</span><span>info@huameifashion.com</span></div>
+        <div class="footer-contact-item"><span class="footer-contact-icon">☎</span><span>+86 20 1234 5678</span></div>
+        <div class="footer-contact-item"><span class="footer-contact-icon">⊙</span><span>广东省广州市白云区某某路88号</span></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2024 华美时装 HUAMEI FASHION. All rights reserved.</span>
+      <span>粤ICP备XXXXXXXX号</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+  // FAQ Accordion
+  document.querySelectorAll('.faq-question').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var item = btn.closest('.faq-item');
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(function (i) { i.classList.remove('open'); });
+      if (!isOpen) { item.classList.add('open'); }
+    });
+  });
+</script>
+</body>
+</html>

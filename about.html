@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>关于我们 - 华美时装</title>
+  <meta name="description" content="了解华美时装20年发展历程，我们的团队、工厂和企业文化。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: none;
+    }
+    .reveal-d1 { transition-delay: 0.1s; }
+    .reveal-d2 { transition-delay: 0.2s; }
+    .reveal-d3 { transition-delay: 0.3s; }
+    .reveal-d4 { transition-delay: 0.4s; }
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+    .value-card {
+      text-align: center;
+      padding: 36px 20px;
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-md);
+      transition: var(--transition);
+    }
+    .value-card:hover {
+      border-color: var(--accent);
+      box-shadow: var(--shadow-md);
+    }
+    .value-icon {
+      font-size: 36px;
+      margin-bottom: 16px;
+      display: block;
+    }
+    .value-name {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    .value-desc {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+    .cert-card {
+      background: var(--off-white);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-md);
+      padding: 24px 20px;
+      text-align: center;
+    }
+    .cert-icon {
+      width: 56px;
+      height: 56px;
+      background: var(--primary);
+      border-radius: var(--radius-sm);
+      margin: 0 auto 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent-light);
+      font-size: 22px;
+    }
+    .cert-name {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .cert-desc {
+      font-size: 12px;
+      color: var(--text-secondary);
+    }
+
+    .factory-gallery {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      grid-template-rows: auto auto;
+      gap: 12px;
+    }
+    .factory-img {
+      overflow: hidden;
+      border-radius: var(--radius-md);
+      background: var(--gray-100);
+    }
+    .factory-img:first-child {
+      grid-row: span 2;
+    }
+    .factory-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      aspect-ratio: auto;
+      transition: transform 0.5s ease;
+    }
+    .factory-img:first-child img {
+      aspect-ratio: 4/5;
+      height: 420px;
+    }
+    .factory-img:not(:first-child) img {
+      height: 200px;
+    }
+    .factory-img:hover img {
+      transform: scale(1.04);
+    }
+
+    @media (max-width: 768px) {
+      .values-grid { grid-template-columns: repeat(2, 1fr); }
+      .cert-grid { grid-template-columns: repeat(2, 1fr); }
+      .factory-gallery { grid-template-columns: 1fr; }
+      .factory-img:first-child { grid-row: span 1; }
+      .factory-img:first-child img { height: 240px; }
+      .factory-img:not(:first-child) img { height: 160px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar transparent" id="mainNav">
+  <div class="navbar-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-text">华美时装</span>
+      <span class="logo-sub">HUAMEI FASHION</span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="nav-link">首页</a></li>
+      <li><a href="about.html" class="nav-link">关于我们</a></li>
+      <li><a href="products.html" class="nav-link">产品服务</a></li>
+      <li><a href="contact.html" class="nav-link">联系我们</a></li>
+      <li><a href="contact.html" class="btn-nav">获取报价</a></li>
+    </ul>
+    <div class="nav-mobile-toggle" id="mobileToggle">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- Page Hero -->
+<div class="page-hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="index.html">首页</a>
+      <span>›</span>
+      <span>关于我们</span>
+    </div>
+    <h1>关于华美时装</h1>
+    <p>二十年专注，铸就品质外贸服装品牌</p>
+  </div>
+</div>
+
+<!-- Introduction -->
+<section class="section">
+  <div class="container">
+    <div class="about-split">
+      <div class="about-content">
+        <div class="section-label reveal">我们的故事</div>
+        <h2 class="section-title reveal">从一家小工坊<br />到行业领军企业</h2>
+        <p class="section-subtitle reveal" style="margin-bottom:20px;">
+          2004年，华美时装在广州白云区的一个小厂房里起步。创始人凭借对时尚的热情和对品质的坚持，带领团队一步一个脚印，逐步发展成为今天拥有数万平米厂房、300余名员工的规模化外贸女装企业。
+        </p>
+        <p class="reveal" style="font-size:14px; color:var(--text-secondary); line-height:1.8;">
+          我们始终相信：只有真正理解客户需求，提供超出预期的价值，才能在竞争激烈的外贸市场立于不败之地。每一件衣服的背后，都凝聚着我们对工艺的匠心追求。
+        </p>
+        <div class="reveal" style="margin-top:32px; display:flex; gap:24px;">
+          <div>
+            <div style="font-size:32px; font-weight:700; color:var(--accent-dark);">300+</div>
+            <div style="font-size:13px; color:var(--text-secondary);">员工团队</div>
+          </div>
+          <div style="width:1px; background:var(--gray-200);"></div>
+          <div>
+            <div style="font-size:32px; font-weight:700; color:var(--accent-dark);">50,000㎡</div>
+            <div style="font-size:13px; color:var(--text-secondary);">生产面积</div>
+          </div>
+          <div style="width:1px; background:var(--gray-200);"></div>
+          <div>
+            <div style="font-size:32px; font-weight:700; color:var(--accent-dark);">500万+</div>
+            <div style="font-size:13px; color:var(--text-secondary);">年产能（件）</div>
+          </div>
+        </div>
+      </div>
+      <div class="about-image reveal reveal-d2">
+        <!-- 替换 images/about/story.jpg -->
+        <img src="images/about/story.jpg" alt="华美时装故事"
+             onerror="this.style.background='#f4f2ef'; this.style.minHeight='420px'" />
+        <div class="about-image-badge">
+          <span class="big-num">2004</span>
+          <span class="badge-text">创立于广州</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Core Values -->
+<section class="section" style="background:var(--off-white);">
+  <div class="container">
+    <div class="section-header center reveal">
+      <div class="section-label">企业文化</div>
+      <h2 class="section-title">我们的核心价值观</h2>
+    </div>
+    <div class="values-grid">
+      <div class="value-card reveal reveal-d1">
+        <span class="value-icon">⭐</span>
+        <h3 class="value-name">品质至上</h3>
+        <p class="value-desc">对每一件产品精益求精，品质是我们不妥协的底线。</p>
+      </div>
+      <div class="value-card reveal reveal-d2">
+        <span class="value-icon">🤝</span>
+        <h3 class="value-name">诚信经营</h3>
+        <p class="value-desc">言出必行，守护每一个合作承诺，建立长久信任关系。</p>
+      </div>
+      <div class="value-card reveal reveal-d3">
+        <span class="value-icon">💡</span>
+        <h3 class="value-name">创新进取</h3>
+        <p class="value-desc">持续追踪时尚前沿，不断创新设计，引领市场潮流。</p>
+      </div>
+      <div class="value-card reveal reveal-d4">
+        <span class="value-icon">🌍</span>
+        <h3 class="value-name">全球视野</h3>
+        <p class="value-desc">立足中国，放眼全球，以国际化视角服务全球买家。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Development Timeline -->
+<section class="section">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-label">发展历程</div>
+      <h2 class="section-title">二十年成长轨迹</h2>
+    </div>
+    <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items:start;">
+      <div class="timeline reveal">
+        <div class="timeline-item">
+          <div class="timeline-year">2004</div>
+          <div class="timeline-title">公司创立</div>
+          <div class="timeline-desc">华美时装在广州白云区创立，以外贸女装批发为核心业务，起步员工30人。</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">2008</div>
+          <div class="timeline-title">扩大生产规模</div>
+          <div class="timeline-desc">建立新厂房，引进现代化缝制设备，年产能突破100万件，产品开始进入欧洲市场。</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">2012</div>
+          <div class="timeline-title">获得ISO质量认证</div>
+          <div class="timeline-desc">通过ISO 9001质量管理体系认证，建立完善的品控体系，产品退货率降至行业最低。</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">2015</div>
+          <div class="timeline-title">进军东南亚市场</div>
+          <div class="timeline-desc">在越南、泰国、印尼等市场建立代理网络，东南亚业务营收占比突破30%。</div>
+        </div>
+      </div>
+      <div class="timeline reveal reveal-d2">
+        <div class="timeline-item">
+          <div class="timeline-year">2018</div>
+          <div class="timeline-title">开设设计中心</div>
+          <div class="timeline-desc">成立专业设计研发团队，每季发布200+原创款式，由跟单生产转型为设计驱动。</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">2020</div>
+          <div class="timeline-title">数字化升级</div>
+          <div class="timeline-desc">完成ERP、WMS数字化改造，实现订单、库存、物流全链路可视化追踪。</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">2022</div>
+          <div class="timeline-title">可持续发展战略</div>
+          <div class="timeline-desc">启动绿色供应链项目，引入环保面料，包装100%可降解，获得OEKO-TEX认证。</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">2024</div>
+          <div class="timeline-title">全球布局深化</div>
+          <div class="timeline-desc">覆盖全球80+国家，年出口额超2亿元，成为行业标杆外贸服装企业。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Factory Photos -->
+<section class="section" style="background:var(--off-white);">
+  <div class="container">
+    <div class="section-header center reveal">
+      <div class="section-label">工厂实景</div>
+      <h2 class="section-title">现代化生产基地</h2>
+      <p class="section-subtitle">50,000㎡标准化厂房，200+台先进设备，全程透明化生产</p>
+    </div>
+    <div class="factory-gallery reveal">
+      <!-- 替换 images/about/ 目录下对应图片 -->
+      <div class="factory-img">
+        <img src="images/about/factory1.jpg" alt="生产车间"
+             onerror="this.parentNode.style.background='#e8e5e0'; this.parentNode.style.display='flex'; this.parentNode.style.alignItems='center'; this.parentNode.style.justifyContent='center'; this.style.display='none'; this.insertAdjacentHTML('afterend', '<span style=\'color:#a09b93;font-size:13px;\'>factory1.jpg</span>')" />
+      </div>
+      <div class="factory-img">
+        <img src="images/about/factory2.jpg" alt="品控部门"
+             onerror="this.parentNode.style.background='#e8e5e0'; this.style.display='none'" />
+      </div>
+      <div class="factory-img">
+        <img src="images/about/factory3.jpg" alt="成品仓库"
+             onerror="this.parentNode.style.background='#e8e5e0'; this.style.display='none'" />
+      </div>
+      <div class="factory-img">
+        <img src="images/about/factory4.jpg" alt="设计中心"
+             onerror="this.parentNode.style.background='#e8e5e0'; this.style.display='none'" />
+      </div>
+      <div class="factory-img">
+        <img src="images/about/factory5.jpg" alt="打板房"
+             onerror="this.parentNode.style.background='#e8e5e0'; this.style.display='none'" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Certifications -->
+<section class="section">
+  <div class="container">
+    <div class="section-header center reveal">
+      <div class="section-label">资质认证</div>
+      <h2 class="section-title">国际认证，品质保障</h2>
+    </div>
+    <div class="cert-grid">
+      <div class="cert-card reveal reveal-d1">
+        <div class="cert-icon">✓</div>
+        <div class="cert-name">ISO 9001</div>
+        <div class="cert-desc">质量管理体系认证</div>
+      </div>
+      <div class="cert-card reveal reveal-d2">
+        <div class="cert-icon">♻</div>
+        <div class="cert-name">OEKO-TEX</div>
+        <div class="cert-desc">有害物质限制认证</div>
+      </div>
+      <div class="cert-card reveal reveal-d3">
+        <div class="cert-icon">★</div>
+        <div class="cert-name">SGS 认证</div>
+        <div class="cert-desc">国际通行品质验证</div>
+      </div>
+      <div class="cert-card reveal reveal-d4">
+        <div class="cert-icon">⚙</div>
+        <div class="cert-name">BSCI 认证</div>
+        <div class="cert-desc">商业社会责任认证</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-banner">
+  <div class="container">
+    <h2 class="section-title">合作共赢，共创未来</h2>
+    <p class="section-subtitle" style="color:rgba(255,255,255,0.65); margin:0 auto 36px;">
+      无论您是独立买手、批发商还是品牌采购方，我们都期待与您建立长久的合作关系。
+    </p>
+    <a href="contact.html" class="btn btn-primary">立即联系我们</a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="footer-logo-text">华美时装</div>
+        <p class="footer-desc">专注外贸女装批发二十年，为全球买家提供高品质、多款式的服装批发服务。</p>
+      </div>
+      <div class="footer-col">
+        <h4>快速导航</h4>
+        <div class="footer-links">
+          <a href="index.html">首页</a>
+          <a href="about.html">关于我们</a>
+          <a href="products.html">产品服务</a>
+          <a href="contact.html">联系我们</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>产品类别</h4>
+        <div class="footer-links">
+          <a href="products.html">连衣裙系列</a>
+          <a href="products.html">套装系列</a>
+          <a href="products.html">上装系列</a>
+          <a href="products.html">外套大衣</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>联系方式</h4>
+        <div class="footer-contact-item"><span class="footer-contact-icon">✉</span><span>info@huameifashion.com</span></div>
+        <div class="footer-contact-item"><span class="footer-contact-icon">☎</span><span>+86 20 1234 5678</span></div>
+        <div class="footer-contact-item"><span class="footer-contact-icon">⊙</span><span>广东省广州市白云区某某路88号</span></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2024 华美时装 HUAMEI FASHION. All rights reserved.</span>
+      <span>粤ICP备XXXXXXXX号</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
